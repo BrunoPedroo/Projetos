@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board{
+   width: 100%;
+   height: 500px;
+   border-bottom: 20px solid #1d8423;
+   background:linear-gradient(rgb(48, 143, 216), rgb(172, 200, 245));
+   margin: 0 auto;
+   position: relative;
+   overflow: hidden;
+
+}
+
+.nuvem{
+    width: 500px;
+    position: absolute;
+    animation: nuvem 30s infinite linear;
+    z-index: 2;
+}
+
+.pipe{
+    position: absolute;
+    width: 100px; 
+    bottom: 0;
+   animation: pipe 1.5s infinite linear;
+   z-index: 1;
+}
+
+.mario{
+    height: 150px;
+    position: absolute;
+    bottom:0;
+    left: 40px;
+    z-index: 2;
+       
+}
+
+.castelo{
+    position: absolute;
+    width: 300px;
+    bottom: 0;
+    animation: castelo 40s infinite linear;
+    z-index: 0;
+
+}
+
+.jump{
+    animation: jump 500ms ease-out;
+
+}
+
+footer{
+    background: linear-gradient(rgb(168, 246, 100), rgb(101, 144, 45));
+    height: 229px;
+}
+
+.score{
+    position: absolute;
+    bottom: 100px;
+    left: 20px;
+    font-size: 20pt;
+    
+
+}
+
+.best-score{
+    position: absolute;
+    bottom: 100px;
+    right: 20px;
+    font-size: 20pt;
+}
+
+@keyframes jump{
+    0%{
+        bottom: 0;
+    }
+    20% {
+        bottom: 100px;
+    }
+    40%{
+
+        bottom: 100px;
+    }
+    60% {
+        bottom: 100px;
+    }
+    80% {
+        bottom: 100px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes pipe {
+    from {
+        right: -120px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes nuvem {
+    from {
+        right: -500px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes castelo {
+    from {
+        right: -300px;
+    }
+    to {
+        right: 100%;
+    }
+}
